@@ -7,6 +7,12 @@
  - [Introducción](#id1)
  - [Material usado](#id2)
  - [Resultados y conclusiones](#id3)
+      - [Difeomorfismo 1](#id3.1)
+      - [Difeomorfismo 2](#id3.2)
+      - [Difeomorfismo 3](#id3.3)
+      - [Difeomorfismo 4](#id3.4)
+      - [Difeomorfismo 5](#id3.5)
+      - [Difeomorfismo 6](#id3.6)
 
 ## Enunciado <a name=id0></a>
 
@@ -37,7 +43,7 @@ El problema lo podemos dividir en dos partes:
  2) La coordenada $z$ la movemos de alguna forma desde el punto actual $z = z_0$ hasta el punto de destino $z=-1$. Para ello podemos utilizar una simple función lineal, u otras más complejas para distintas visualizaciones.
  
 
-### Difeomorfismos 1
+### Difeomorfismo 1 <a name=id3.1></a>
 
 Para la transformación de $z$ la función más simple es una transformación lineal tal que $f(0) = z_0$ y $f(1) = -1$. Esta es,
 
@@ -50,6 +56,10 @@ Para transformar las coordenadas $(x,y)$ podemos multiplicar (proporcionalmente 
 $$
 f : [-1,1) \rightarrow [1/2, +\infty) : (z,t) \mapsto \dfrac{1}{1 - z}
 $$
+
+<div style="text-align:center;">
+  <image src="/images/f1.png" style="width:40%;">
+</div>
 
 Ahora introducimos $t$ para conseguir una transformación continua,
 
@@ -69,12 +79,80 @@ generando el siguiente resultado:
   <image src="/images/difeomorfismo_1.gif" style="width:100%; height:12cm;">
 </div>
 
+
+### Difeomorfismo 2 <a name=id3.2></a>
+
+De forma a similar a como hemos generado el difeomorfismo anterior, podemos hacer alguna pequeña modificación en cómo se mueve la coordenada $z$. Por ejemplo, 
+
+$$ 
+f(z) = \dfrac{z}{1-tz}(1-t) + (-1)t
+$$
+
+observamos que en este caso hacemos un cambio lineal de $f(z)=\dfrac{z}{1-tz} = z$ (en $t=0$) a $f(z)=-1$ (en $t=1$), al igual que antes. En esta ocasión se intenta aumentar la coordenada $z$ al comienzo de las primeras parametrizaciones y luego terminar disminuyendolo hasta $z=-1$ en vez de directamente bajar linealmente hasta $z=-1$ para evitar esa sensación de *aprastar* la esfera. Sin embargo, como podemos ver en la animación resultante, no conseguimos el efecto deseado pues para cuando $\dfrac{z}{1-tz}$ comienza a aumentar, el factor $(1-t)$ lo disminuye. 
+
 <div style="text-align:center;">
-  <image src="/images/difeomorfismo_1.gif" style="width:100%; height:12cm;">
   <image src="/images/difeomorfismo_2.gif" style="width:100%; height:12cm;">
+</div>
+
+Para evitar que esas dos funciones se contraresten podemos deformar el intervalo $[0,1]$ de tal forma que para cuando $\dfrac{z}{1-tz}$ comienze a aumentar el factor $(1-t)$ no lo cancele (temporalmente, pues está claro que al final dicho factor tiene que ser nulo).  
+
+### Difeomorfismo 3 <a name=id3.3></a>
+
+Como comentabamos al final del anterior apartado, generamos alguna deformación del intervalo $[0,1]$ tal que no mantengamos *cerca* del 0 gran parte del intervalo. Podemos pensar en las funciones tangente y arcotangente con algunas modificaciones como:
+
+$$
+f(t) = \dfrac{2}{\pi} \cdot arctg \left(\dfrac{1}{20}tg(\dfrac{\pi}{2}t) \right)
+$$
+
+<div style="text-align:center;">
+  <image src="/images/f2.png" style="width:40%;">
+</div>
+
+Para entender mejor de dónde ha salido la función comento algunas observaciones (informales): 
+ - $tg(\dfrac{\pi}{2}t)$ tiene como objetivo, pasar con $\dfrac{\pi}{2}t$ de $[0,1]$ a $[0,\dfrac{\pi}{2}]$ y así con la tangente pasar al intervalo $[0, +\infty)$.
+ - $\dfrac{1}{20}$ es un factor para *aplastar* el intervalo (se pueden hacer modificaciones y pruebas con él), que al estar dentro de la arcontangente, tendrá mucho más efecto.
+ - $arctg()$ permite devolvernos al intervalo $[0,\dfrac{\pi}{2}]$.
+ - $\dfrac{2}{\pi}$ nos lleva finalmente al intervalo $[0,1]$.
+
+así conseguimos mantener mayor tiempo el factor $\dfrac{z}{1-tz}$ y apreciar dicho aumento temporal de la esfera. Agrupando estos resultados ($x$ e $y$ se modifican igual que en el primero), generamos $g_t$ tal que
+
+$$
+x \mapsto \dfrac{x}{1-tz}
+$$
+
+$$
+y \mapsto \dfrac{y}{1-tz}
+$$
+
+$$
+z \mapsto \dfrac{z}{1-tz}(1-k) + (-1)k \quad donde \quad k = \dfrac{2}{\pi} \cdot arctg \left(\dfrac{1}{20}tg(\dfrac{\pi}{2}t) \right)
+$$
+
+Generando finalmente la siguiente deformación con los objetivos que queríamos,
+
+<div style="text-align:center;">
   <image src="/images/difeomorfismo_3.gif" style="width:100%; height:12cm;">
+</div>
+
+
+### Difeomorfismo 4 <a name=id3.4></a>
+
+<div style="text-align:center;">
   <image src="/images/difeomorfismo_4.gif" style="width:100%; height:12cm;">
+</div>
+
+
+### Difeomorfismo 5 <a name=id3.5></a>
+
+<div style="text-align:center;">
   <image src="/images/difeomorfismo_5.gif" style="width:100%; height:12cm;">
+</div>
+
+
+### Difeomorfismo 6 <a name=id3.6></a>
+
+<div style="text-align:center;">
   <image src="/images/difeomorfismo_6.gif" style="width:100%; height:12cm;">
 </div>
+
 
