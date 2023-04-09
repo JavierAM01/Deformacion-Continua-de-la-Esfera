@@ -113,8 +113,14 @@ Para entender mejor de dónde ha salido la función comento algunas observacione
  - $\dfrac{1}{20}$ es un factor para *aplastar* el intervalo (se pueden hacer modificaciones y pruebas con él), que al estar dentro de la arcontangente, tendrá mucho más efecto.
  - $arctg()$ permite devolvernos al intervalo $[0,\dfrac{\pi}{2}]$.
  - $\dfrac{2}{\pi}$ nos lleva finalmente al intervalo $[0,1]$.
+ 
+Observación: razonando de forma análoga, podemos obtener resultados opuestos cambiando el factor $\dfrac{1}{20}$ por $20$ (por ejemplo), y así obtenemos el objetivo contrario, mantenernos cerca del 1 la mayor parte del intervalo.
 
-así conseguimos mantener mayor tiempo el factor $\dfrac{z}{1-tz}$ y apreciar dicho aumento temporal de la esfera. Agrupando estos resultados ($x$ e $y$ se modifican igual que en el primero), generamos $g_t$ tal que
+<div style="text-align:center;">
+  <image src="/images/f3.png" style="width:40%;">
+</div>
+
+Recuperando los resultados anteriores, conseguimos mantener mayor tiempo el factor $\dfrac{z}{1-tz}$ y apreciar dicho aumento temporal de la esfera. Agrupando estos resultados ($x$ e $y$ se modifican igual que en el primero), generamos $g_t$ tal que
 
 $$
 x \mapsto \dfrac{x}{1-tz}
@@ -125,8 +131,14 @@ y \mapsto \dfrac{y}{1-tz}
 $$
 
 $$
-z \mapsto \dfrac{z}{1-tz}(1-k) + (-1)k \quad donde \quad k = \dfrac{2}{\pi} \cdot arctg \left(\dfrac{1}{20}tg(\dfrac{\pi}{2}t) \right)
+z \mapsto \dfrac{z}{1-tz}(1-k) + (-1)k
 $$
+
+ donde 
+ 
+ $$
+ k = \dfrac{2}{\pi} \cdot arctg \left(\dfrac{1}{20}tg(\dfrac{\pi}{2}t) \right)
+ $$
 
 Generando finalmente la siguiente deformación con los objetivos que queríamos,
 
@@ -137,13 +149,37 @@ Generando finalmente la siguiente deformación con los objetivos que queríamos,
 
 ### Difeomorfismo 4 <a name=id3.4></a>
 
+Para esta nueva familia de parametrizaciones cambiaremos el factor multiplicativo $k$ de las coordenadas $x$ e $y$. Antes hemos utilizado $\dfrac{1}{1-tz}$ cuyo objetivo es comenzar en $k=1$ y terminar $k \rightarrow \infty$. Ahora utilizaremos la función tangente con el mismo objetivo. Para ello modificamos el intervalo $[-1,1]$ al intervalo $[0,\dfrac{\pi}{2}$ y luego lo pasamos por la tangente llevandolo al intervalo $[0, +\infty)$. Finalmente  sumamos 1 para comenzar el factor en 1. Para la actualización de $z$ utlizamos una de las anteriores como $\dfrac{z}{1-tz}(1-t) + (-1)t$. Puesto que la tangente da cambios muy extremos, es decir, su derivada tiende a infinito cuando se tiende a $\dfrac{\pi}{2}$ entonces observaremos en la animación que los valores se mantienen cerca de la esfera inicial hasta que se ven afectados por el cambio tangencial. Por ello podemos observar como poco a poco, los puntos con valores de $z$ superiores se han alejado rápidamente hacia el infito mientras que otros todavía se mantienen muy cerca de su punto original. 
+ 
+$$
+g_t (x,y,z) = (c_{t,z}x, c_{t,z}y, \dfrac{z}{1-tz}(1-t) + (-1)t)  
+$$
+
+ donde 
+ 
+ $$
+ c_{t,z} = 1 + w \cdot tg(\frac{\pi}{2}(z+1)/2) t
+ $$
+
 <div style="text-align:center;">
   <image src="/images/difeomorfismo_4.gif" style="width:100%; height:12cm;">
 </div>
 
 
 ### Difeomorfismo 5 <a name=id3.5></a>
+ 
+ Mediante un pequeño cambio de la función anterior, podemos hacer que el cambio tangencial tarde un poco más en afectar, es decir, modificar otra vez el intervalo $[0,1]$ de forma que nos mantengamos cerca del 0 más tiempo. Para ello utilizamos la función anterior: $\dfrac{2}{\pi} \cdot arctg \left(\dfrac{1}{20}tg(\dfrac{\pi}{2}t) \right)$. Con ella permitimos que el cambio se vea afectado más tarde, pero igualmente acabará afectando, por lo que la transformación queda similar. 
 
+$$
+g_t (x,y,z) = (c_{t,z}x, c_{t,z}y, \dfrac{z}{1-tz}(1-t) + (-1)t)  
+$$
+
+ donde 
+ 
+ $$
+ c_{t,z} = 1 + w \cdot tg(\frac{\pi}{2}(z+1)/2) \cdot \dfrac{2}{\pi} \cdot arctg \left(\dfrac{1}{20}tg(\dfrac{\pi}{2}t) \right)
+ $$
+ 
 <div style="text-align:center;">
   <image src="/images/difeomorfismo_5.gif" style="width:100%; height:12cm;">
 </div>
@@ -151,6 +187,18 @@ Generando finalmente la siguiente deformación con los objetivos que queríamos,
 
 ### Difeomorfismo 6 <a name=id3.6></a>
 
+Por último, generamos una transformación similiar a las primeras pero con tangentes y arcotangentes. Construimos un factor en $[1,+\infty)$. Para ello introducimos la tangente, y en su interior hacemos una transformación lineal desde $arctg(1)$ hasta $\dfrac{\pi}{2}$. Finalmente conseguimos los siguientes resultados.
+
+$$
+g_t (x,y,z) = (c_{t,z}x, c_{t,z}y, z(1-t) + (-1)t)  
+$$
+
+ donde 
+ 
+ $$
+ c_{t,z} = tg(\dfrac{\pi}{2}\dfrac{1+z}{2}t + arctg(1)(1-t))
+ $$
+ 
 <div style="text-align:center;">
   <image src="/images/difeomorfismo_6.gif" style="width:100%; height:12cm;">
 </div>
