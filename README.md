@@ -13,6 +13,7 @@
       - [Difeomorfismo 4](#id3.4)
       - [Difeomorfismo 5](#id3.5)
       - [Difeomorfismo 6](#id3.6)
+          - [Demostración](#id3.6.1)
 
 ## Enunciado <a name=id0></a>
 
@@ -203,5 +204,59 @@ $$
 <div style="text-align:center;">
   <image src="/images/difeomorfismo_6.gif" style="width:100%; height:12cm;">
 </div>
+ 
+#### Demostración <a name=id3.6.1></a>
+ 
+Para terminar esta serie de ejemplos, demostraremos (por ejemplo) que esta última función es un difeomorfismo.
+ 
+ 1) Primero de todo, las funciones tangente y arcotangente son diferenciables. Por composición de funciones diferenciables, $g_t$ lo es.
+ 2) Veamos que $g_t$ es biyectiva y por tanto tiene inversa. Sean $(x_0, y_0, z_0) \in \mathcal{S}_1^2$ y
+ 
+$$
+(x_1, y_1, z_1) = g_t(x_0, y_0, z_0) = (c_{t,z_0} \ x_0, c_{t,z_0}\ y_0, z_0(1-t) + (-1)t)
+$$
+
+Queremos partir de un punto cualquiera $(x_1,y_1,z_1)$ y llegar al punto (único) $(x_0,y_0,z_0)$. Por lo que los valores $x_1,y_1,z_1,t\in \mathbb{R}$ son conocidos.
+ 
+Despejando en la última coordenada tenemos: $z_1 = z_0(1-t) + (-1)t$ entonces:
+ 
+   - Si $z_0 = -1$ entonces $(x_0,y_0,z_0) = (x_1,y_1,z_1) = (0,0,-1)$ y ya hemos terminado.
+   - Si $t = 1$ estamos en la proyección completa $(c_{1,z_0} \ x_0, c_{1,z_0}\ y_0, -1)$ donde $c_{1,z_0} = tg(\dfrac{\pi}{2}\dfrac{1+z_0}{2})$. Así tenemos que $x_1 = c_{1,z_0} \ x_0$ e $y_1 = c_{1,z_0} \ y_0$, es decir, $y_0 = \dfrac{y_1}{c_{1,z_0}} = \dfrac{y_1}{x_1}x_0$. Por tanto teniendo en cuenta que $x_0^2 + y_0^2 + z_0^2 = 1$ tenemos que,
+ 
+$$
+x_1 = x_0 \ c_{1,z_0} = 
+$$
+ 
+$$
+= x_0 \ tg(\dfrac{\pi}{2}\dfrac{1+z_0}{2}) =
+$$
+ 
+$$
+= x_0 \ tg(\dfrac{\pi}{4}(1+z_0)) =
+$$
+
+$$
+= x_0 \ tg(\dfrac{\pi}{4}(1 + \sqrt{1 - x_0^2 - y_0^2})) =
+$$
+
+$$
+= x_0 \ tg(\dfrac{\pi}{4}(1 + \sqrt{1 - x_0^2 - (\dfrac{y_1}{x_1}x_0)^2})) = 
+$$
+
+$$
+= x_0 \ tg(\dfrac{\pi}{4}(1 + \sqrt{1 - (1+\dfrac{y_1^2}{x_1^2})x_0^2})) := f(x_0)
+$$
+ 
+donde el último término es una función de $x_0$ monótona por lo que $f(x_0) = x_1$ tiene una única solución. Así despejamos obtenemos $x_0 = k$ para cierto $k\in \mathbb{R}$ y de ahí obtenemos $y_0$ y $z_0$.
+
+   - Si $z_0 \neq -1$ y $t \neq 1$ entonces $z_0 = \dfrac{z_1 - t}{1-t} \in \mathbb{R}$. Ahora el valor $c_{t,z_0} = tg(\dfrac{\pi}{2}\dfrac{1+z_0}{2}t + arctg(1)(1-t))$ es conocido por serlo $t$ y $z_0$. Así como $(x_1, y_1, z_1) = (c_{t,z_0} \ x_0, c_{t,z_0}\ y_0, z_0(1-t) + (-1)t)$, se tiene que 
+ 
+ $$
+ (x_0,y_0,z_0) = (\dfrac{1}{c_{t,z_0}} \ x_1, \dfrac{1}{c_{t,z_0}} \ y_1, \dfrac{z_1 - t}{1-t})
+ $$
+ 
+
+
+
 
 
