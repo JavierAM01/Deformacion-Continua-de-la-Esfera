@@ -184,6 +184,7 @@ $$
   <image src="/images/difeomorfismo_5.gif" style="width:100%; height:12cm;">
 </div>
 
+A diferencia del difeomorfismo anterior (difeomorfismo 4), podemos observar la sensación de que la esfera se contrae, esto es devido a lo comentado anteriormente. Como el factor $\dfrac{2}{\pi} \cdot arctg \left(\dfrac{1}{20}tg(\dfrac{\pi}{2}t) \right)$ cancela durante mayor tiempo el valor $tg(\frac{\pi}{2}(z+1)/2)$, los puntos (en las coordenadas $x$ e $y$) se mantienen cerca del origen, mientras que la coordenada $z$ progresivamente se va acercando al plano $z = -1$, por lo que da la impresión de contracción en dicha parte de la esfera.
 
 ### Difeomorfismo 6 <a name=id3.6></a>
 
