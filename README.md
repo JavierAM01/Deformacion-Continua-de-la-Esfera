@@ -124,22 +124,19 @@ Observación: razonando de forma análoga, podemos obtener resultados opuestos c
 Recuperando los resultados anteriores, conseguimos mantener mayor tiempo el factor $\dfrac{z}{1-tz}$ y apreciar dicho aumento temporal de la esfera. Agrupando estos resultados ($x$ e $y$ se modifican igual que en el primero), generamos $g_t$ tal que
 
 $$
-x \mapsto \dfrac{x}{1-tz}
+\begin{array}{rcl}
+x &\mapsto & \dfrac{x}{1-tz} \\ \\
+y &\mapsto & \dfrac{y}{1-tz} \\ \\
+z &\mapsto & \dfrac{z}{1-tz}(1-k) + (-1)k
+\end{array}
 $$
 
-$$
-y \mapsto \dfrac{y}{1-tz}
-$$
 
-$$
-z \mapsto \dfrac{z}{1-tz}(1-k) + (-1)k
-$$
-
- donde 
+donde 
  
- $$
- k = \dfrac{2}{\pi} \cdot arctg \left(\dfrac{1}{20}tg(\dfrac{\pi}{2}t) \right)
- $$
+$$
+k = \dfrac{2}{\pi} \cdot arctg \left(\dfrac{1}{20}tg(\dfrac{\pi}{2}t) \right)
+$$
 
 Generando finalmente la siguiente deformación con los objetivos que queríamos,
 
@@ -239,7 +236,7 @@ donde el último término es una función de $x_0$ monótona por lo que $f(x_0) 
    - Si $z_0 \neq -1$ y $t \neq 1$ entonces $z_0 = \dfrac{z_1 - t}{1-t} \in \mathbb{R}$. Ahora el valor $c_{t,z_0} = tg(\dfrac{\pi}{2}\dfrac{1+z_0}{2}t + arctg(1)(1-t))$ es conocido por serlo $t$ y $z_0$. Así como $(x_1, y_1, z_1) = (c_{t,z_0} \ x_0, c_{t,z_0}\ y_0, z_0(1-t) + (-1)t)$, se tiene que 
  
  $$
- (x_0,y_0,z_0) = (\dfrac{1}{c_{t,z_0}} \ x_1, \dfrac{1}{c_{t,z_0}} \ y_1, \dfrac{z_1 - t}{1-t})
+ (x_0,y_0,z_0) = \left( \dfrac{1}{c_{t,z_0}} \ x_1, \dfrac{1}{c_{t,z_0}} \ y_1, \dfrac{z_1 - t}{1-t} \right)
  $$
  
 
