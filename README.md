@@ -222,29 +222,16 @@ Despejando en la última coordenada tenemos: $z_1 = z_0(1-t) + (-1)t$ entonces:
  
    - Si $z_0 = -1$ entonces $(x_0,y_0,z_0) = (x_1,y_1,z_1) = (0,0,-1)$ y ya hemos terminado.
    - Si $t = 1$ estamos en la proyección completa $(c_{1,z_0} \ x_0, c_{1,z_0}\ y_0, -1)$ donde $c_{1,z_0} = tg(\dfrac{\pi}{2}\dfrac{1+z_0}{2})$. Así tenemos que $x_1 = c_{1,z_0} \ x_0$ e $y_1 = c_{1,z_0} \ y_0$, es decir, $y_0 = \dfrac{y_1}{c_{1,z_0}} = \dfrac{y_1}{x_1}x_0$. Por tanto teniendo en cuenta que $x_0^2 + y_0^2 + z_0^2 = 1$ tenemos que,
- 
-$$
-x_1 = x_0 \ c_{1,z_0} = 
-$$
- 
-$$
-= x_0 \ tg(\dfrac{\pi}{2}\dfrac{1+z_0}{2}) =
-$$
- 
-$$
-= x_0 \ tg(\dfrac{\pi}{4}(1+z_0)) =
-$$
 
 $$
-= x_0 \ tg(\dfrac{\pi}{4}(1 + \sqrt{1 - x_0^2 - y_0^2})) =
-$$
-
-$$
-= x_0 \ tg(\dfrac{\pi}{4}(1 + \sqrt{1 - x_0^2 - (\dfrac{y_1}{x_1}x_0)^2})) = 
-$$
-
-$$
-= x_0 \ tg(\dfrac{\pi}{4}(1 + \sqrt{1 - (1+\dfrac{y_1^2}{x_1^2})x_0^2})) := f(x_0)
+\begin{array}{rcl}
+x_1 & = & x_0 \ c_{1,z_0} \\
+&=& x_0 \ tg(\dfrac{\pi}{2}\dfrac{1+z_0}{2}) \\
+&=& x_0 \ tg(\dfrac{\pi}{4}(1+z_0)) \\
+&=& x_0 \ tg(\dfrac{\pi}{4}(1 + \sqrt{1 - x_0^2 - y_0^2})) \\
+&=& x_0 \ tg \left( \dfrac{\pi}{4} \left( 1 + \sqrt{1 - x_0^2 - (\dfrac{y_1}{x_1}x_0)^2} \right) \right) \\
+&=& x_0 \ tg \left( \dfrac{\pi}{4} \left( 1 + \sqrt{1 - (1+\dfrac{y_1^2}{x_1^2})x_0^2} \right) \right) := f(x_0)
+\end{array}
 $$
  
 donde el último término es una función de $x_0$ monótona por lo que $f(x_0) = x_1$ tiene una única solución. Así despejamos obtenemos $x_0 = k$ para cierto $k\in \mathbb{R}$ y de ahí obtenemos $y_0$ y $z_0$.
