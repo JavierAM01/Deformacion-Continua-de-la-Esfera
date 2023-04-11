@@ -207,7 +207,7 @@ $$
 Para terminar esta serie de ejemplos, demostraremos (no con todos los detalles) que esta última función es un difeomorfismo.
  
  1) Primero de todo, las funciones tangente y arcotangente son diferenciables. Por composición de funciones diferenciables, $g_t$ lo es.
- 2) Veamos que $g_t$ tiene inversa diferenciable, ambas inyectivas y por tanto $g_t$ biyectiva. Sean $(x_0, y_0, z_0) \in \mathcal{S}_1^2$ y
+ 2) Veamos que $g_t$ tiene inversa diferenciable y ambas inyectivas. Sean $(x_0, y_0, z_0) \in \mathcal{S}_1^2$ y
  
 $$
 (x_1, y_1, z_1) = g_t(x_0, y_0, z_0) = (c_{t,z_0} \ x_0, c_{t,z_0}\ y_0, z_0(1-t) + (-1)t)
