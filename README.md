@@ -227,7 +227,7 @@ x_1 & = & x_0 \ c_{1,z_0} \\
 &=& x_0 \ tg(\dfrac{\pi}{4}(1+z_0)) \\
 &=& x_0 \ tg(\dfrac{\pi}{4}(1 + \sqrt{1 - x_0^2 - y_0^2})) \\
 &=& x_0 \ tg \left( \dfrac{\pi}{4} \left( 1 + \sqrt{1 - x_0^2 - (\dfrac{y_1}{x_1}x_0)^2} \right) \right) \\
-&=& x_0 \ tg \left( \dfrac{\pi}{4} \left( 1 + \sqrt{1 - (1+\dfrac{y_1^2}{x_1^2})x_0^2} \right) \right) := f(x_0)
+&=& x_0 \ tg \left( \dfrac{\pi}{4} \left( 1 + \sqrt{1 - (1+\dfrac{y_1^2}{x_1^2})x_0^2} \right) \right) =: f(x_0)
 \end{array}
 $$
  
